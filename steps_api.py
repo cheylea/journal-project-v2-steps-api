@@ -25,6 +25,3 @@ class StepsPayload(BaseModel):
 def receive_steps(payload: StepsPayload):
     add_steps(supabase, payload.date, payload.steps)
     return {"status": "ok", "message": "Steps recorded"}
-
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
