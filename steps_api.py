@@ -23,7 +23,7 @@ class StepsPayload(BaseModel):
 
 @app.post("/add_steps")
 def receive_steps(payload: StepsPayload):
-    jf.add_steps(supabase, payload.date, payload.steps)
+    add_steps(supabase, payload.date, payload.steps)
     return {"status": "ok", "message": "Steps recorded"}
 
 if __name__ == "__main__":
