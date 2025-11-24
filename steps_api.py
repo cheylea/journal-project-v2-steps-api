@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-import uvicorn
 import os
 from supabase import create_client, Client
 
